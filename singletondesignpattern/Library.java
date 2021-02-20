@@ -35,7 +35,7 @@ public class Library {
         if (this.books.containsKey(bookName)) {
             int count = this.books.get(bookName);
             if (count <= 0) {
-                System.out.println("Sorry " + bookName + "is not in stock");
+                System.out.println("Sorry " + bookName + " is not in stock");
             } else {
                 this.books.put(bookName, count-1);
                 System.out.println("" + bookName + " was successfully checked out");
@@ -66,9 +66,9 @@ public class Library {
      * traverses through the hashmap of books and prints each with its key and value
      */
     public void displayBooks() {
-        System.out.println("Inventory:");
+        System.out.println("\nInventory:");
         for (Map.Entry<String, Integer> entry : this.books.entrySet()) {
-		    System.out.println(" -" + entry.getKey() + ": " + entry.getValue());
+		    System.out.println(" -" + entry.getKey() + ", copies: " + entry.getValue());
 		}
     }
 
